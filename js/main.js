@@ -124,19 +124,35 @@
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
+      var name = document.getElementById("name").value.trim();
+      var email = document.getElementById("email").value.trim();
+      var company = document.getElementById("company").value.trim();
+      var message = document.getElementById("message").value.trim();
+
+      var whatsappNumber = "573113597014"; 
+      var whatsappText = "👋 Hola Nicolás, mi nombre es *" + name + "*.\n\n";
+      
+      if (company) {
+        whatsappText += "Vengo de la empresa *" + company + "*.\n\n";
+      }
+      
+      whatsappText += "Te escribo por lo siguiente:\n" + message + "\n\n";
+      whatsappText += "Puedes contactarme a mi email: " + email;
+
+      var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(whatsappText);
+
       var submitBtn = contactForm.querySelector(".form-submit");
       var originalText = submitBtn.innerHTML;
 
-      submitBtn.innerHTML = "✓ ¡Mensaje enviado!";
-      submitBtn.style.background = "#10b981";
+      submitBtn.innerHTML = "⏳ Abriendo WhatsApp...";
       submitBtn.disabled = true;
 
       setTimeout(function () {
+        window.open(whatsappUrl, "_blank");
         submitBtn.innerHTML = originalText;
-        submitBtn.style.background = "";
         submitBtn.disabled = false;
         contactForm.reset();
-      }, 3000);
+      }, 800);
     });
   }
 
