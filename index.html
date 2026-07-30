@@ -3,1081 +3,385 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <title>Nicolás Ortiz Nuñez — Desarrollador de Software &amp; Creador Digital</title>
-  <meta name="description" content="Tecnólogo en Análisis y Desarrollo de Software. Construyo ideas y las convierto en soluciones digitales. Desarrollo web, automatización, IA y productos digitales." />
-  <meta name="keywords" content="Nicolás Ortiz Nuñez, Nicolás Ortiz, Desarrollador de Software, Software Developer, Desarrollo Web, IA, Automatización, SENA, Tecnólogo, Portafolio" />
-  <meta name="author" content="Nicolás Ortiz Nuñez" />
+  <title>Nicol�s Ortiz Nu�ez � Desarrollador de Software</title>
+  
+  <meta name="description" content="Construyo mientras aprendo. Desarrollador de software enfocado en Backend, IA y crear productos digitales que aportan valor." />
+  <meta name="keywords" content="Nicol�s Ortiz, Desarrollador Backend, FastAPI, React, Inteligencia Artificial, Automatizaci�n, Portafolio" />
+  <meta name="author" content="Nicol�s Ortiz Nu�ez" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nicolás Ortiz Nuñez — Desarrollador de Software &amp; Creador Digital" />
-  <meta property="og:description" content="Tecnólogo en Análisis y Desarrollo de Software. Construyo ideas y las convierto en soluciones digitales." />
+  <meta property="og:title" content="Nicol�s Ortiz Nu�ez � Desarrollador de Software" />
+  <meta property="og:description" content="Construyo mientras aprendo. Desarrollador de software enfocado en Backend, IA y crear productos digitales." />
   <meta property="og:locale" content="es_CO" />
-  <!-- <meta property="og:image" content="URL_DE_TU_IMAGEN_OG" /> -->
-  <!-- <meta property="og:url" content="https://tu-dominio.com" /> -->
 
-  <!-- JSON-LD Structured Data -->
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nicol�s Ortiz Nu�ez � Desarrollador de Software" />
+  <meta name="twitter:description" content="Construyo mientras aprendo. Desarrollador de software enfocado en Backend, IA y crear productos digitales." />
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "#person",
-        "name": "Nicolás Ortiz Nuñez",
-        "jobTitle": "Tecnólogo en Análisis y Desarrollo de Software",
-        "description": "Desarrollador de software con enfoque en desarrollo web, productos digitales, automatización e inteligencia artificial.",
-        "sameAs": [
-          "https://github.com/NicolasOrtiz88"
-        ],
-        "knowsAbout": [
-          "Desarrollo Web", "JavaScript", "React", "Next.js", "Node.js",
-          "PostgreSQL", "Docker", "Automatización", "Inteligencia Artificial",
-          "Prompt Engineering", "UX/UI"
-        ],
-        "email": "nicolasorti88@gmail.com"
-      },
-      {
-        "@type": "WebSite",
-        "name": "Portafolio de Nicolás Ortiz Nuñez",
-        "description": "Portafolio personal y marca profesional de Nicolás Ortiz Nuñez"
-      }
-    ]
+    "@type": "Person",
+    "name": "Nicol�s Ortiz Nu�ez",
+    "jobTitle": "Desarrollador de Software",
+    "description": "Desarrollador enfocado en Backend, Inteligencia Artificial y Automatizaci�n.",
+    "url": "https://github.com/NicolasOrtiz88",
+    "sameAs": ["https://github.com/NicolasOrtiz88"],
+    "knowsAbout": ["Backend", "FastAPI", "React", "IA", "Automatizaci�n", "Desarrollo Web"]
   }
   </script>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Favicon placeholder -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>N</text></svg>" />
 </head>
-
 <body>
+  
+  <div class="cursor-glow"></div>
 
-  <!-- ============================================
-       NAVBAR
-       ============================================ -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#hero" class="nav-logo">N<span>.</span></a>
-
-      <div class="nav-links" id="navLinks">
-        <a href="#hero"><span class="nav-number">01</span>Este soy yo</a>
-        <a href="#journey"><span class="nav-number">02</span>De dónde vengo</a>
-        <a href="#skills"><span class="nav-number">03</span>Qué he aprendido</a>
-        <a href="#projects"><span class="nav-number">04</span>Qué he construido</a>
-        <a href="#thinking"><span class="nav-number">05</span>Cómo pienso</a>
-        <a href="#interests"><span class="nav-number">06</span>Qué me interesa</a>
-        <a href="#next"><span class="nav-number">07</span>Hacia dónde voy</a>
-        <a href="#contact"><span class="nav-number">08</span>Hablemos</a>
-      </div>
-
-      <a href="assets/cv-nicolas-ortiz.pdf" download class="nav-cta desktop-only">
-        ↓ CV
-      </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
+  <nav class="navbar" role="navigation" aria-label="Navegaci�n principal">
+    <div class="nav-brand">N.</div>
+    <div class="nav-links">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#proceso">Mi Proceso</a>
+      <a href="#historia">Historia</a>
+      <a href="#contacto">Hablemos</a>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-  <div class="mobile-menu" id="mobileMenu">
-    <button class="close-btn" id="mobileClose" aria-label="Cerrar menú">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-    <a href="#hero" class="mobile-link"><span class="nav-number">01</span>Este soy yo</a>
-    <a href="#journey" class="mobile-link"><span class="nav-number">02</span>De dónde vengo</a>
-    <a href="#skills" class="mobile-link"><span class="nav-number">03</span>Qué he aprendido</a>
-    <a href="#projects" class="mobile-link"><span class="nav-number">04</span>Qué he construido</a>
-    <a href="#thinking" class="mobile-link"><span class="nav-number">05</span>Cómo pienso</a>
-    <a href="#interests" class="mobile-link"><span class="nav-number">06</span>Qué me interesa</a>
-    <a href="#next" class="mobile-link"><span class="nav-number">07</span>Hacia dónde voy</a>
-    <a href="#contact" class="mobile-link"><span class="nav-number">08</span>Hablemos</a>
-    <a href="assets/cv-nicolas-ortiz.pdf" download class="nav-cta" style="margin-top: 1.5rem; text-align:center; justify-content:center;">
-      ↓ Descargar CV
-    </a>
-  </div>
-
-  <!-- ============================================
-       01 — HERO
-       ============================================ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-orb one"></div>
-    <div class="hero-bg-orb two"></div>
-
-    <div class="container">
-      <!-- Content -->
-      <div class="hero-content">
-        <div class="hero-status">
-          <span class="status-dot"></span>
-          Explorando → IA + Automatización
-        </div>
-
-        <p class="hero-greeting">Hola, soy</p>
-        <h1 class="hero-name">
-          <span class="gradient-text">Nicolás</span> Ortiz Nuñez
-        </h1>
-
-        <p class="hero-headline">Convierto ideas en experiencias digitales.</p>
-        <p class="hero-subheadline">Aprendo construyendo.</p>
-
-        <p class="hero-bio">
-          Tecnólogo en Análisis y Desarrollo de Software. Curioso por naturaleza, creativo por convicción. Construyendo mi camino en el mundo de la tecnología — un proyecto a la vez.
+  <!-- HERO SECTION -->
+  <section class="hero-redesign" id="hero">
+    <div class="hero-bg-collage"></div>
+    <div class="container hero-redesign-container">
+      
+      <div class="hero-redesign-content">
+        <h1 class="hero-redesign-title">Construyo mientras aprendo.</h1>
+        <p class="hero-redesign-subtitle">
+          Soy Nicol�s Ortiz. Me apasiona desarrollar soluciones digitales, explorar nuevas tecnolog�as y convertir ideas en productos que aporten valor.
         </p>
+        
+        <div class="hero-dashboard">
+          <div class="dash-item"><span class="icon">??</span> Colombia</div>
+          <div class="dash-item"><span class="icon">??</span> Disponible para oportunidades</div>
+          <div class="dash-item"><span class="icon">??</span> Backend � FastAPI � React</div>
+          <div class="dash-item"><span class="icon">??</span> Explorando IA y Automatizaci�n</div>
+        </div>
 
-        <div class="hero-ctas">
-          <a href="#projects" class="btn btn-primary">
-            📂 Ver mis proyectos
-          </a>
-          <a href="#journey" class="btn btn-outline">
-            👤 Conocer mi historia
-          </a>
-          <a href="assets/cv-nicolas-ortiz.pdf" download class="btn btn-outline">
-            ↓ Descargar CV
-          </a>
+        <p class="hero-looking-for">
+          Actualmente busco oportunidades donde pueda seguir creciendo como desarrollador, participar en proyectos reales y aportar soluciones utilizando tecnolog�as modernas.
+        </p>
+      </div>
+
+      <div class="hero-redesign-visual">
+        <div class="hero-photo-placeholder" style="overflow: hidden; padding: 0; display: flex; justify-content: center; align-items: center; background: transparent;">
+          <img src="assets/profile.jpg" alt="Nicol�s Ortiz Nu�ez" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%; border-radius: 1rem;" />
         </div>
       </div>
 
-      <!-- Photo -->
-      <div class="hero-visual">
-        <div class="hero-photo-wrapper">
-          <div class="hero-photo-border"><div class="hero-photo-border-inner"></div></div>
-
-          <div class="hero-photo-placeholder" style="overflow: hidden; padding: 0; display: flex; justify-content: center; align-items: center; background: transparent;">
-            <img src="assets/profile.jpg" alt="Nicolás Ortiz Nuñez" style="width: 100%; height: 100%; object-fit: cover; object-position: center 15%;" />
-          </div>
-
-          <!-- Floating badges -->
-          <div class="floating-badge badge-1">✨ IA &amp; Automatización</div>
-          <div class="floating-badge badge-2">💻 Full Stack Dev</div>
-          <div class="floating-badge badge-3">⚡ Creativo</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="scroll-indicator">
-      <span>Descubre más</span>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
   </section>
 
-  <!-- ============================================
-       01b — ABOUT
-       ============================================ -->
-  <section class="section" id="about">
+  <!-- PROYECTOS SECTION -->
+  <section class="section projects-section" id="proyectos">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">01</div>
-        <h2 class="section-title">Este soy yo</h2>
-        <p class="section-subtitle">No soy solamente un CV. Soy una persona construyendo su camino en la tecnología.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text animate-on-scroll">
-          <p>Tengo 19 años y soy Tecnólogo en Análisis y Desarrollo de Software del SENA. La tecnología no es solamente algo que estudio — es una herramienta que me permite crear, resolver problemas, automatizar procesos y convertir ideas en productos digitales.</p>
-          <p>Aprendo haciendo. Cuando encuentro una tecnología, herramienta o concepto nuevo, me interesa experimentar con él. Por eso mi portafolio no muestra solamente resultados finales, sino evolución.</p>
-          <p>Todavía estoy construyendo mi camino, pero ya estoy creando cosas, aprendiendo constantemente y buscando oportunidades para crecer.</p>
-
-          <div class="about-quote">
-            <p>«No soy solamente alguien que está aprendiendo a programar. Soy una persona que está aprendiendo a convertir problemas e ideas en soluciones digitales.»</p>
-          </div>
-        </div>
-
-        <div class="animate-on-scroll">
-          <h3 class="traits-title">Mi personalidad profesional</h3>
-          <div class="traits-grid stagger-children">
-            <div class="trait-card animate-on-scroll">
-              <div class="trait-icon">🔍</div>
-              <div>
-                <div class="trait-name">Curioso</div>
-                <div class="trait-desc">Me gusta entender cómo funcionan las cosas.</div>
+      <h2 class="section-title">Lo que he construido</h2>
+      
+      <div class="projects-grid">
+        
+        <!-- Juventudes -->
+        <article class="project-card project-juventudes">
+          <div class="project-content">
+            <span class="project-badge">En Desarrollo</span>
+            <h3 class="project-title">Plataforma Municipal de Juventudes</h3>
+            <p class="project-summary">Construyendo impacto social real con una arquitectura backend limpia y segura para la Alcald�a de Mosquera.</p>
+            
+            <div class="project-details">
+              <div class="project-col">
+                <h4>Mi participaci�n:</h4>
+                <ul class="check-list">
+                  <li>? Dise�o y arquitectura Backend</li>
+                  <li>? Desarrollo de APIs con FastAPI</li>
+                  <li>? Gesti�n de base de datos relacional</li>
+                  <li>? Autenticaci�n y seguridad</li>
+                </ul>
               </div>
-            </div>
-            <div class="trait-card animate-on-scroll">
-              <div class="trait-icon">💡</div>
-              <div>
-                <div class="trait-name">Creativo</div>
-                <div class="trait-desc">Busco soluciones diferentes a problemas comunes.</div>
-              </div>
-            </div>
-            <div class="trait-card animate-on-scroll">
-              <div class="trait-icon">🧠</div>
-              <div>
-                <div class="trait-name">Analítico</div>
-                <div class="trait-desc">Intento entender el problema antes de resolverlo.</div>
-              </div>
-            </div>
-            <div class="trait-card animate-on-scroll">
-              <div class="trait-icon">📖</div>
-              <div>
-                <div class="trait-name">Aprendiz</div>
-                <div class="trait-desc">Reconozco que siempre hay algo nuevo por aprender.</div>
-              </div>
-            </div>
-            <div class="trait-card animate-on-scroll">
-              <div class="trait-icon">🚀</div>
-              <div>
-                <div class="trait-name">Proactivo</div>
-                <div class="trait-desc">Tomo una idea y la convierto en algo tangible.</div>
-              </div>
-            </div>
-            <div class="trait-card animate-on-scroll">
-              <div class="trait-icon">🔄</div>
-              <div>
-                <div class="trait-name">Adaptable</div>
-                <div class="trait-desc">Aprendo nuevas herramientas cuando un proyecto lo necesita.</div>
-              </div>
-            </div>
-            <div class="trait-card animate-on-scroll">
-              <div class="trait-icon">🛡️</div>
-              <div>
-                <div class="trait-name">Responsable</div>
-                <div class="trait-desc">Mi experiencia laboral me enseñó la importancia de cumplir.</div>
+              <div class="project-col">
+                <h4>Lo que aprend�:</h4>
+                <ul class="check-list">
+                  <li>? Creaci�n de APIs escalables</li>
+                  <li>? Modelado de datos complejos</li>
+                  <li>? Mejores pr�cticas en seguridad backend</li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       02 — JOURNEY / TIMELINE
-       ============================================ -->
-  <section class="section" id="journey">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">02</div>
-        <h2 class="section-title">De dónde vengo</h2>
-        <p class="section-subtitle">Mi camino profesional ha mezclado aprendizaje académico, experiencia laboral y proyectos tecnológicos.</p>
-      </div>
-
-      <div class="timeline animate-on-scroll" id="timeline">
-        <div class="timeline-line"></div>
-
-        <!-- Educación -->
-        <div class="timeline-item animate-on-scroll">
-          <div class="timeline-node edu">🎓</div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3>Tecnólogo en Análisis y Desarrollo de Software</h3>
-                <span class="timeline-place">SENA</span>
-              </div>
-              <span class="timeline-period">[AGREGAR PERÍODO]</span>
-            </div>
-            <p class="timeline-desc">Formación integral en desarrollo de software que abarca desde la programación y bases de datos hasta el análisis de requerimientos y metodologías de desarrollo.</p>
-            <div class="timeline-label">Áreas de formación</div>
-            <div class="timeline-tags">
-              <span class="tag tag-brand">Programación</span>
-              <span class="tag tag-brand">Bases de datos</span>
-              <span class="tag tag-brand">Desarrollo web</span>
-              <span class="tag tag-brand">Análisis de requerimientos</span>
-              <span class="tag tag-brand">Diseño de soluciones</span>
-              <span class="tag tag-brand">Arquitectura de software</span>
-              <span class="tag tag-brand">Frontend &amp; Backend</span>
-              <span class="tag tag-brand">APIs</span>
-              <span class="tag tag-brand">Seguridad</span>
-              <span class="tag tag-brand">Pruebas de software</span>
-              <span class="tag tag-brand">Control de versiones</span>
-              <span class="tag tag-brand">Metodologías de desarrollo</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Experiencia laboral -->
-        <div class="timeline-item animate-on-scroll">
-          <div class="timeline-node work">💼</div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3>Apoyo operativo y administrativo</h3>
-                <span class="timeline-place">Nacional de Trenzados S.A. / NT Colombia</span>
-              </div>
-              <span class="timeline-period">[AGREGAR PERÍODO]</span>
-            </div>
-            <p class="timeline-desc">Experiencia en actividades de apoyo operativo y administrativo dentro de una empresa de manufactura, que me permitió entender que la tecnología no existe aislada — el software debe resolver problemas reales de personas y organizaciones.</p>
-
-            <div class="timeline-label">Actividades principales</div>
-            <ul class="timeline-activities">
-              <li>Manejo de inventarios</li>
-              <li>Organización de registros</li>
-              <li>Apoyo en SST</li>
-              <li>Apoyo en compras y proveedores</li>
-              <li>Gestión de documentación</li>
-              <li>Facturación</li>
-              <li>Control de inventario con software</li>
-              <li>Procesos de dotación</li>
-              <li>Etiquetado y embalaje</li>
-              <li>Inducciones a nuevos empleados</li>
-              <li>Seguimiento de procesos internos</li>
-            </ul>
-
-            <div class="timeline-label">Habilidades desarrolladas</div>
-            <div class="timeline-tags">
-              <span class="tag tag-emerald">Responsabilidad</span>
-              <span class="tag tag-emerald">Organización</span>
-              <span class="tag tag-emerald">Capacidad de adaptación</span>
-              <span class="tag tag-emerald">Trabajo en equipo</span>
-              <span class="tag tag-emerald">Atención al detalle</span>
-              <span class="tag tag-emerald">Procesos empresariales</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Artesanías & CO -->
-        <div class="timeline-item animate-on-scroll">
-          <div class="timeline-node work">💼</div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3>Artesanías &amp; CO</h3>
-                <span class="timeline-place">Proyecto Full-Stack</span>
-              </div>
-            </div>
-            <p class="timeline-desc">Desarrollo de mi primer proyecto real, aplicando conocimientos en un e-commerce y entendiendo el ciclo completo de desarrollo web.</p>
-          </div>
-        </div>
+        </article>
 
         <!-- Wonder Flowers -->
-        <div class="timeline-item animate-on-scroll">
-          <div class="timeline-node work">💼</div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3>Wonder Flowers</h3>
-                <span class="timeline-place">E-commerce &amp; Automatización</span>
+        <article class="project-card project-wonder">
+          <div class="project-content">
+            <span class="project-badge">E-commerce</span>
+            <h3 class="project-title">Wonder Flowers</h3>
+            <p class="project-summary">Experiencia digital elegante para una florister�a, combinando desarrollo, dise�o y experiencia de usuario.</p>
+            
+            <div class="project-details">
+              <div class="project-col">
+                <h4>Mi participaci�n:</h4>
+                <ul class="check-list">
+                  <li>? Dise�o UI/UX enfocado en conversi�n</li>
+                  <li>? Desarrollo Frontend</li>
+                  <li>? Integraci�n de chatbot automatizado</li>
+                  <li>? Conexi�n con plataforma Shopify</li>
+                </ul>
+              </div>
+              <div class="project-col">
+                <h4>Lo que aprend�:</h4>
+                <ul class="check-list">
+                  <li>? Principios de dise�o centrado en el usuario</li>
+                  <li>? Automatizaci�n de atenci�n al cliente</li>
+                  <li>? Ecosistema Shopify</li>
+                </ul>
               </div>
             </div>
-            <p class="timeline-desc">Creación de una experiencia digital moderna, optimizando el diseño UI/UX y explorando la automatización de atención con chatbots basados en IA.</p>
           </div>
-        </div>
+        </article>
 
-        <!-- Plataforma Municipal de Juventudes -->
-        <div class="timeline-item animate-on-scroll">
-          <div class="timeline-node work">💼</div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3>Plataforma Municipal de Juventudes</h3>
-                <span class="timeline-place">Alcaldía de Mosquera</span>
+        <!-- Artesanias -->
+        <article class="project-card project-artesanias">
+          <div class="project-content">
+            <span class="project-badge">Full-Stack</span>
+            <h3 class="project-title">Artesan�as & CO</h3>
+            <p class="project-summary">El proyecto donde todo empez�. Una tienda online conectando talento local con un mercado digital.</p>
+            
+            <div class="project-details">
+              <div class="project-col">
+                <h4>Mi participaci�n:</h4>
+                <ul class="check-list">
+                  <li>? Desarrollo Full-Stack</li>
+                  <li>? Gesti�n de inventario en base de datos</li>
+                  <li>? Interfaz de usuario</li>
+                </ul>
               </div>
-              <span class="timeline-period" style="color:var(--emerald-400); font-weight:600; border: 1px solid rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.1);">🟢 En desarrollo</span>
+              <div class="project-col">
+                <h4>Lo que aprend�:</h4>
+                <ul class="check-list">
+                  <li>? El ciclo completo de desarrollo web</li>
+                  <li>? Fundamentos de bases de datos</li>
+                  <li>? Trabajo en equipo y metodolog�as �giles</li>
+                </ul>
+              </div>
             </div>
-            <p class="timeline-desc">Diseño y construcción de la arquitectura backend con FastAPI, creando APIs escalables para conectar a la comunidad juvenil del municipio.</p>
           </div>
-        </div>
+        </article>
 
-        <!-- Explorando IA y Automatización -->
-        <div class="timeline-item animate-on-scroll">
-          <div class="timeline-node edu">✨</div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3>Exploración en IA y Automatización</h3>
-                <span class="timeline-place">Aprendizaje continuo</span>
-              </div>
-            </div>
-            <p class="timeline-desc">Integración de herramientas de inteligencia artificial para optimizar flujos de trabajo y crear soluciones de software más eficientes e inteligentes.</p>
-          </div>
-        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Próximos retos -->
-        <div class="timeline-item animate-on-scroll">
-          <div class="timeline-node edu">🚀</div>
-          <div class="timeline-card">
-            <div class="timeline-card-header">
-              <div>
-                <h3>Próximos retos</h3>
-                <span class="timeline-place">Evolución profesional</span>
-              </div>
-            </div>
-            <p class="timeline-desc">Preparado para asumir nuevos desafíos, aportar valor real en equipos de desarrollo y seguir evolucionando profesionalmente.</p>
-          </div>
+  <!-- C�MO TRABAJO & PRINCIPIOS -->
+  <section class="section philosophy-section" id="filosofia">
+    <div class="container">
+      <h2 class="section-title">Mi forma de trabajar</h2>
+      
+      <div class="philosophy-grid">
+        <div class="phil-card">
+          <h3>Pienso antes de programar</h3>
+          <p>Me gusta entender profundamente el problema, el contexto y al usuario antes de empezar a escribir la primera l�nea de c�digo.</p>
+        </div>
+        <div class="phil-card">
+          <h3>Aprendo r�pido</h3>
+          <p>Disfruto explorar herramientas nuevas y aplicarlas en proyectos reales. La tecnolog�a cambia, la capacidad de adaptarse no.</p>
+        </div>
+        <div class="phil-card">
+          <h3>Me importa el usuario</h3>
+          <p>No solo me interesa que una aplicaci�n funcione a nivel t�cnico; tambi�n debe ser clara, intuitiva y �til para quien la utiliza.</p>
+        </div>
+        <div class="phil-card">
+          <h3>Soy honesto con mi experiencia</h3>
+          <p>Prefiero explicar exactamente cu�l fue mi participaci�n en cada proyecto antes que exagerar mis conocimientos.</p>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle mt-12">Mis principios al desarrollar software</h3>
+      <ul class="principles-list">
+        <li><strong>Entender antes de construir.</strong> Nunca empiezo a ciegas.</li>
+        <li><strong>La simplicidad suele ser la mejor soluci�n.</strong> Menos complejidad, menos errores.</li>
+        <li><strong>El usuario siempre importa.</strong> El c�digo existe para servir a las personas.</li>
+        <li><strong>Prefiero aprender algo nuevo antes que repetir lo mismo.</strong> El crecimiento est� en la incomodidad.</li>
+        <li><strong>La calidad vale m�s que la cantidad.</strong> Hacer una cosa muy bien es mejor que tres mediocres.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROCESO INTERACTIVO -->
+  <section class="section process-section" id="proceso">
+    <div class="container">
+      <h2 class="section-title">C�mo construyo un proyecto</h2>
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="step-icon">??</div>
+          <span class="step-label">Idea</span>
+          <div class="step-detail">Comprender el objetivo central.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">??</div>
+          <span class="step-label">Planeaci�n</span>
+          <div class="step-detail">Antes de escribir c�digo intento entender el problema, los usuarios y las necesidades del proyecto.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">??</div>
+          <span class="step-label">Dise�o</span>
+          <div class="step-detail">Estructurar la arquitectura y la experiencia de usuario.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">??</div>
+          <span class="step-label">Desarrollo</span>
+          <div class="step-detail">Escribir c�digo limpio, modular y mantenible.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">??</div>
+          <span class="step-label">Pruebas</span>
+          <div class="step-detail">Garantizar que todo funcione bajo diferentes escenarios.</div>
+        </div>
+        <div class="process-step">
+          <div class="step-icon">??</div>
+          <span class="step-label">Publicaci�n</span>
+          <div class="step-detail">Desplegar a producci�n y monitorear el resultado.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       03 — SKILLS
-       ============================================ -->
-  <section class="section" id="skills">
+  <!-- HISTORIA Y L�NEA DE TIEMPO -->
+  <section class="section history-section" id="historia">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">03</div>
-        <h2 class="section-title">Qué he aprendido</h2>
-        <p class="section-subtitle">Tecnologías con las que he trabajado, experimentado o estoy explorando activamente.</p>
-      </div>
+      <h2 class="section-title">Mi historia</h2>
+      <p class="history-text">
+        Empec� estudiando desarrollo en el SENA porque me gustaba entender c�mo funcionaban las cosas por dentro. 
+        Despu�s descubr� que lo que realmente disfruto es construir soluciones. 
+        Hoy sigo aprendiendo todos los d�as mientras desarrollo proyectos reales relacionados con backend, inteligencia artificial y automatizaci�n.
+      </p>
 
-      <div class="skills-legend animate-on-scroll">
-        <div class="legend-item"><span class="legend-dot practica"></span> Experiencia práctica</div>
-        <div class="legend-item"><span class="legend-dot familiaridad"></span> Familiaridad</div>
-        <div class="legend-item"><span class="legend-dot exploracion"></span> Exploración</div>
-      </div>
-
-      <div class="skills-grid stagger-children">
-        <!-- Frontend -->
-        <div class="skill-category animate-on-scroll">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">🖥️</div>
-            <span class="skill-cat-name">Frontend</span>
-          </div>
-          <div class="skill-items">
-            <span class="skill-badge practica">HTML <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">CSS <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">JavaScript <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">React <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">Next.js <span class="skill-dot">●</span></span>
-            <span class="skill-badge familiaridad">React Router <span class="skill-dot">◐</span></span>
-            <span class="skill-badge practica">Tailwind CSS <span class="skill-dot">●</span></span>
-            <span class="skill-badge familiaridad">Bootstrap <span class="skill-dot">◐</span></span>
-            <span class="skill-badge familiaridad">DaisyUI <span class="skill-dot">◐</span></span>
-          </div>
+      <div class="timeline-v2">
+        <div class="time-item">
+          <div class="time-dot"></div>
+          <h4>SENA</h4>
+          <p>Aqu� descubr� que quer�a dedicarme al desarrollo de software.</p>
         </div>
-
-        <!-- Backend -->
-        <div class="skill-category animate-on-scroll">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">⚙️</div>
-            <span class="skill-cat-name">Backend</span>
-          </div>
-          <div class="skill-items">
-            <span class="skill-badge practica">Node.js <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">Express <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">APIs REST <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">JWT <span class="skill-dot">●</span></span>
-            <span class="skill-badge familiaridad">Nodemailer / Resend <span class="skill-dot">◐</span></span>
-            <span class="skill-badge familiaridad">Spring Boot <span class="skill-dot">◐</span></span>
-          </div>
+        <div class="time-item">
+          <div class="time-dot"></div>
+          <h4>NT Colombia</h4>
+          <p>Aprend� c�mo funciona una empresa por dentro y entend� que el software debe resolver necesidades reales.</p>
         </div>
-
-        <!-- Bases de datos -->
-        <div class="skill-category animate-on-scroll">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">🗄️</div>
-            <span class="skill-cat-name">Bases de datos</span>
-          </div>
-          <div class="skill-items">
-            <span class="skill-badge practica">PostgreSQL <span class="skill-dot">●</span></span>
-            <span class="skill-badge familiaridad">MySQL <span class="skill-dot">◐</span></span>
-          </div>
+        <div class="time-item">
+          <div class="time-dot"></div>
+          <h4>Artesan�as & CO</h4>
+          <p>La primera experiencia full-stack end-to-end.</p>
         </div>
-
-        <!-- Herramientas -->
-        <div class="skill-category animate-on-scroll">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">🔧</div>
-            <span class="skill-cat-name">Herramientas</span>
-          </div>
-          <div class="skill-items">
-            <span class="skill-badge practica">Git <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">GitHub <span class="skill-dot">●</span></span>
-            <span class="skill-badge familiaridad">Docker <span class="skill-dot">◐</span></span>
-            <span class="skill-badge familiaridad">Docker Compose <span class="skill-dot">◐</span></span>
-            <span class="skill-badge familiaridad">Nginx <span class="skill-dot">◐</span></span>
-            <span class="skill-badge familiaridad">GitHub Actions <span class="skill-dot">◐</span></span>
-            <span class="skill-badge practica">Postman <span class="skill-dot">●</span></span>
-          </div>
+        <div class="time-item">
+          <div class="time-dot"></div>
+          <h4>Wonder Flowers</h4>
+          <p>Mi primer proyecto donde combin� desarrollo, dise�o y experiencia de usuario comercial.</p>
         </div>
-
-        <!-- IA & Automatización -->
-        <div class="skill-category ai-category animate-on-scroll">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">✨</div>
-            <span class="skill-cat-name">IA &amp; Automatización</span>
-            <span class="ai-badge">En exploración</span>
-          </div>
-          <div class="skill-items">
-            <span class="skill-badge exploracion">Prompt Engineering <span class="skill-dot">○</span></span>
-            <span class="skill-badge exploracion">Chatbots <span class="skill-dot">○</span></span>
-            <span class="skill-badge exploracion">Agentes inteligentes <span class="skill-dot">○</span></span>
-            <span class="skill-badge exploracion">Automatización <span class="skill-dot">○</span></span>
-            <span class="skill-badge practica">Integración de APIs <span class="skill-dot">●</span></span>
-          </div>
+        <div class="time-item">
+          <div class="time-dot"></div>
+          <h4>Plataforma Juventudes</h4>
+          <p>Construyendo impacto social real con arquitectura backend moderna (FastAPI).</p>
         </div>
-
-        <!-- Otros -->
-        <div class="skill-category animate-on-scroll">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">📦</div>
-            <span class="skill-cat-name">Otros</span>
-          </div>
-          <div class="skill-items">
-            <span class="skill-badge practica">Excel / Automatización <span class="skill-dot">●</span></span>
-            <span class="skill-badge familiaridad">Generación de PDFs <span class="skill-dot">◐</span></span>
-            <span class="skill-badge practica">Autenticación <span class="skill-dot">●</span></span>
-            <span class="skill-badge practica">Formularios <span class="skill-dot">●</span></span>
-          </div>
+        <div class="time-item">
+          <div class="time-dot current"></div>
+          <h4>Hoy</h4>
+          <p>Preparado para el siguiente gran reto.</p>
         </div>
       </div>
 
-      <p class="skills-note animate-on-scroll">Los niveles reflejan honestamente mi experiencia actual. No utilizo porcentajes artificiales — prefiero la transparencia.</p>
+      <div class="fun-fact">
+        <strong>?? Dato curioso:</strong> La primera vez que hice una API romp� todo el proyecto. Desde ese d�a entend� la importancia vital de planear y estructurar la arquitectura antes de programar.
+      </div>
+
     </div>
   </section>
 
-  <!-- ============================================
-       04 — PROJECTS
-       ============================================ -->
-  <section class="section" id="projects">
-    <div class="container" style="max-width: 960px;">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">04</div>
-        <h2 class="section-title">Qué he construido</h2>
-        <p class="section-subtitle">Cada proyecto cuenta una historia: por qué nació, qué aprendí, y qué haría diferente.</p>
+  <!-- APRENDIZAJES, VALORES E INTERESES -->
+  <section class="section personal-section" id="personal">
+    <div class="container personal-grid">
+      
+      <div class="personal-col">
+        <h3>Lo que aprend� este a�o</h3>
+        <p class="diary-text">
+          Este a�o confirm� que escribir m�s c�digo no significa escribir mejor c�digo. Empec� a valorar profundamente la arquitectura, la organizaci�n de los proyectos y la importancia de construir pensando en las personas que usar�n el producto.
+        </p>
+        <p class="diary-text mt-4">
+          Descubr� el poder de FastAPI para el backend, aprend� mejores pr�cticas de estructuraci�n e inici� mi exploraci�n en Inteligencia Artificial y automatizaci�n.
+        </p>
       </div>
 
-      <!-- PROYECTOS DESTACADOS -->
-      <div class="projects-featured">
-
-        <!-- Plataforma Municipal de Juventudes -->
-        <div class="project-card animate-on-scroll">
-          <div class="project-header">
-            <span class="project-type" style="color:var(--emerald-400); font-weight:700;">🟢 EN DESARROLLO</span>
-            <div class="project-title-row">
-              <h3 class="project-name">Plataforma Municipal de Juventudes</h3>
-              <div class="project-links">
-                <a href="https://plataformajuventudes.org" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Visitar sitio oficial">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <p class="project-tagline">Plataforma backend sólida y escalable para la Alcaldía de Mosquera, enfocada en la gestión e integración de la comunidad juvenil.</p>
-
-            <div class="project-details">
-              <div class="detail-block">
-                <h4>🎯 El objetivo</h4>
-                <p>Facilitar la conexión entre más de 500 jóvenes, más de 50 líderes y más de 33 organizaciones afines según sus intereses y características demográficas, mediante una plataforma centralizada y eficiente.</p>
-              </div>
-              <div class="detail-block">
-                <h4>💡 Estado del proyecto</h4>
-                <p>El proyecto se encuentra en pleno <b>desarrollo activo</b>. Este es el alcance funcional que se está construyendo actualmente y que sigue evolucionando.</p>
-              </div>
-            </div>
-
-            <div class="project-role">
-              <h4>💻 Mi participación</h4>
-              <p>Diseñé y construí la arquitectura backend utilizando <b>FastAPI</b>. Desarrollé las APIs REST para registro, autenticación, perfilamiento e integración con el frontend (Vue.js). Diseñé la estructura relacional de la base de datos para garantizar la integridad y eficiencia de consultas, y definí la lógica de negocio para conectar usuarios con organizaciones según sus intereses.</p>
-            </div>
-
-            <div class="project-tech">
-              <div class="project-tech-label">Tecnologías que utilizo</div>
-              <div class="tech-groups">
-                <div>
-                  <div class="tech-group-label">Backend</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">FastAPI</span>
-                    <span class="tech-tag">REST APIs</span>
-                    <span class="tech-tag">JSON</span>
-                  </div>
-                </div>
-                <div>
-                  <div class="tech-group-label">Integración &amp; Infraestructura</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">Vue.js (Integración)</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Base de datos relacional</span>
-                  </div>
-                </div>
-                <div>
-                  <div class="tech-group-label">Buenas Prácticas</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">Arquitectura Backend</span>
-                    <span class="tech-tag">Git</span>
-                    <span class="tech-tag">Entornos Virtuales</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Artesanías & CO -->
-        <div class="project-card animate-on-scroll">
-          <div class="project-header">
-            <span class="project-type">Proyecto destacado</span>
-            <div class="project-title-row">
-              <h3 class="project-name">Artesanías &amp; CO</h3>
-              <div class="project-links">
-                <a href="https://github.com/NicolasOrtiz88" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Ver proyecto en GitHub" aria-label="GitHub">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <p class="project-tagline">Plataforma digital orientada a artesanos para convertir una idea de negocio en una solución digital.</p>
-
-            <div class="project-details">
-              <div class="detail-block">
-                <h4>🎯 El problema</h4>
-                <p>Los artesanos necesitan herramientas digitales accesibles para gestionar y mostrar sus productos, pero las plataformas existentes no están diseñadas para sus necesidades específicas.</p>
-              </div>
-              <div class="detail-block">
-                <h4>💡 La idea</h4>
-                <p>Crear una plataforma que ayude a artesanos a digitalizar su negocio — desde la gestión de productos hasta la comunicación con clientes.</p>
-              </div>
-            </div>
-
-            <div class="project-role">
-              <h4>💻 Mi participación</h4>
-              <p>Fui desarrollador Full-Stack principal. Arquitecté e implementé el servidor en Node.js/Express, diseñé la base de datos en PostgreSQL, desarrollé el panel de administración en React/Next.js y configuré el entorno de despliegue automatizado con Docker y GitHub Actions.</p>
-            </div>
-
-            <div class="project-tech">
-              <div class="project-tech-label">Tecnologías que utilicé</div>
-              <div class="tech-groups">
-                <div>
-                  <div class="tech-group-label">Frontend</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">Next.js</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Tailwind CSS</span>
-                  </div>
-                </div>
-                <div>
-                  <div class="tech-group-label">Backend</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">JWT</span>
-                  </div>
-                </div>
-                <div>
-                  <div class="tech-group-label">DB &amp; Infra</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">PostgreSQL</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">GitHub Actions</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="project-expand-btn" data-target="artesanias-details" aria-expanded="false">
-              ▾ Ver aprendizajes y funcionalidades
-            </button>
-
-            <div class="project-expandable" id="artesanias-details">
-              <div class="project-expandable-inner">
-                <div class="expandable-section features-section">
-                  <h4 class="features">💻 Funcionalidades principales</h4>
-                  <ul>
-                    <li><span class="bullet" style="color:var(--brand-400)">▸</span> Gestión de productos y catálogo</li>
-                    <li><span class="bullet" style="color:var(--brand-400)">▸</span> Sistema de autenticación con JWT</li>
-                    <li><span class="bullet" style="color:var(--brand-400)">▸</span> Reportes en Excel y PDF</li>
-                    <li><span class="bullet" style="color:var(--brand-400)">▸</span> Envío de correos electrónicos</li>
-                  </ul>
-                </div>
-                <div class="expandable-section">
-                  <h4 class="learnings">📖 Lo que aprendí</h4>
-                  <ul>
-                    <li><span class="bullet" style="color:var(--emerald-400)">✦</span> Cómo estructurar un proyecto full-stack con separación clara entre frontend y backend</li>
-                    <li><span class="bullet" style="color:var(--emerald-400)">✦</span> Implementación de autenticación segura con JWT y manejo de sesiones</li>
-                    <li><span class="bullet" style="color:var(--emerald-400)">✦</span> Configuración de contenedores Docker para desarrollo y despliegue</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Wonder Flowers -->
-        <div class="project-card animate-on-scroll">
-          <div class="project-header">
-            <span class="project-type">Proyecto destacado</span>
-            <div class="project-title-row">
-              <h3 class="project-name">Wonder Flowers</h3>
-              <div class="project-links">
-                <a href="https://wonder-flowers-store.myshopify.com" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="Visitar sitio oficial" aria-label="Visitar sitio">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-body">
-            <p class="project-tagline">Experiencia digital para una floristería — combinando e-commerce, diseño visual, automatización y chatbot con IA.</p>
-
-            <div class="project-details">
-              <div class="detail-block">
-                <h4>🎯 El problema</h4>
-                <p>Una floristería necesita una presencia digital que no solo muestre sus productos, sino que guíe al cliente desde el descubrimiento hasta la compra, de manera cálida y personalizada.</p>
-              </div>
-              <div class="detail-block">
-                <h4>💡 La idea</h4>
-                <p>Crear una experiencia digital completa que incluya un catálogo visualmente atractivo y un chatbot inteligente que asista a los clientes durante su proceso de compra.</p>
-              </div>
-            </div>
-
-            <div class="project-role">
-              <h4>💻 Mi participación</h4>
-              <p>Desarrollé la interfaz visual adaptando y personalizando temas de Shopify mediante HTML/CSS/JavaScript. Diseñé la experiencia de usuario (UX/UI) y lideré el diseño conversacional de <b>Wonder Flowers Assistant</b>, implementando automatización de WhatsApp con integración de Prompt Engineering.</p>
-            </div>
-
-            <div class="project-tech">
-              <div class="project-tech-label">Tecnologías que utilicé</div>
-              <div class="tech-groups">
-                <div>
-                  <div class="tech-group-label">Web &amp; Plataforma</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">Shopify</span>
-                    <span class="tech-tag">HTML/CSS/JS</span>
-                  </div>
-                </div>
-                <div>
-                  <div class="tech-group-label">Automatización</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">Chatbot con IA</span>
-                    <span class="tech-tag">WhatsApp</span>
-                    <span class="tech-tag">Prompt Engineering</span>
-                  </div>
-                </div>
-                <div>
-                  <div class="tech-group-label">Diseño</div>
-                  <div class="tech-group-items">
-                    <span class="tech-tag">UX/UI</span>
-                    <span class="tech-tag">Branding</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <button class="project-expand-btn" data-target="wonder-details" aria-expanded="false">
-              ▾ Ver aprendizajes y funcionalidades
-            </button>
-
-            <div class="project-expandable" id="wonder-details">
-              <div class="project-expandable-inner">
-                <div class="expandable-section features-section">
-                  <h4 class="features">💻 Funcionalidades principales</h4>
-                  <ul>
-                    <li><span class="bullet" style="color:var(--brand-400)">▸</span> Catálogo de productos visual e integración e-commerce</li>
-                    <li><span class="bullet" style="color:var(--brand-400)">▸</span> Chatbot conversacional con IA</li>
-                    <li><span class="bullet" style="color:var(--brand-400)">▸</span> Automatización de comunicación vía WhatsApp</li>
-                  </ul>
-                </div>
-                <div class="expandable-section">
-                  <h4 class="learnings">📖 Lo que aprendí</h4>
-                  <ul>
-                    <li><span class="bullet" style="color:var(--emerald-400)">✦</span> Cómo combinar tecnología con experiencia de usuario y necesidades comerciales</li>
-                    <li><span class="bullet" style="color:var(--emerald-400)">✦</span> Diseño de flujos conversacionales automatizados</li>
-                    <li><span class="bullet" style="color:var(--emerald-400)">✦</span> El valor de personalizar la comunicación automatizada</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="personal-col">
+        <h3>Mis valores</h3>
+        <ul class="values-list">
+          <li><strong>Honestidad:</strong> Conmigo y con mi equipo.</li>
+          <li><strong>Curiosidad:</strong> El motor del desarrollador.</li>
+          <li><strong>Aprendizaje continuo:</strong> Nunca dejar de ser un estudiante de la tecnolog�a.</li>
+          <li><strong>Responsabilidad:</strong> Asumir mis errores y mis �xitos.</li>
+          <li><strong>Colaboraci�n:</strong> El mejor c�digo se hace en equipo.</li>
+        </ul>
       </div>
 
-      <!-- COLABORACIONES -->
-      <div class="animate-on-scroll">
-        <div class="collab-header">
-          <span>👥</span>
-          <h3>Colaboraciones y contribuciones</h3>
-        </div>
-        <div class="collab-grid">
-          <div class="collab-card">
-            <div class="collab-card-type"><span>👥</span> Colaboración</div>
-            <h4>ZENKAR</h4>
-            <p>Proyecto web enfocado en la comparación de vehículos, donde la información se presenta de manera clara y útil para el usuario.</p>
-            <div class="collab-contribution">
-              <div class="label">Mi participación</div>
-              <p>No actué como desarrollador principal. Mi contribución fue como apoyo integral en la visualización, realizando control de calidad (QA), identificando correcciones de errores y proponiendo mejoras visuales (UX) para optimizar la interfaz final.</p>
-            </div>
-            <div class="timeline-tags">
-              <span class="tag tag-brand">Revisión visual</span>
-              <span class="tag tag-brand">QA / Testing</span>
-              <span class="tag tag-brand">Corrección de errores</span>
-              <span class="tag tag-brand">Apoyo en UX</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <!-- ============================================
-       05 — THINKING PROCESS
-       ============================================ -->
-  <section class="section" id="thinking">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">05</div>
-        <h2 class="section-title">Cómo pienso</h2>
-        <p class="section-subtitle">Antes de construir algo, intento entender el problema, la persona y la solución.</p>
-      </div>
-
-      <div class="thinking-steps">
-        <div class="thinking-line"></div>
-
-        <div class="thinking-step animate-on-scroll">
-          <div class="thinking-node"><span>01</span></div>
-          <div class="thinking-card">
-            <div class="thinking-mobile-num">01</div>
-            <div class="thinking-icon">❓</div>
-            <p>¿Qué problema estamos resolviendo?</p>
-          </div>
-        </div>
-
-        <div class="thinking-step animate-on-scroll">
-          <div class="thinking-node"><span>02</span></div>
-          <div class="thinking-card">
-            <div class="thinking-mobile-num">02</div>
-            <div class="thinking-icon">👥</div>
-            <p>¿Para quién?</p>
-          </div>
-        </div>
-
-        <div class="thinking-step animate-on-scroll">
-          <div class="thinking-node"><span>03</span></div>
-          <div class="thinking-card">
-            <div class="thinking-mobile-num">03</div>
-            <div class="thinking-icon">🎯</div>
-            <p>¿Cuál es la solución más adecuada?</p>
-          </div>
-        </div>
-
-        <div class="thinking-step animate-on-scroll">
-          <div class="thinking-node"><span>04</span></div>
-          <div class="thinking-card">
-            <div class="thinking-mobile-num">04</div>
-            <div class="thinking-icon">🔧</div>
-            <p>¿Cómo la construimos?</p>
-          </div>
-        </div>
-
-        <div class="thinking-step animate-on-scroll">
-          <div class="thinking-node"><span>05</span></div>
-          <div class="thinking-card">
-            <div class="thinking-mobile-num">05</div>
-            <div class="thinking-icon">📈</div>
-            <p>¿Cómo podemos mejorarla?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       06 — INTERESTS
-       ============================================ -->
-  <section class="section" id="interests">
-    <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">06</div>
-        <h2 class="section-title">Qué me interesa</h2>
-        <p class="section-subtitle">Explorando activamente cómo utilizar la tecnología para construir mejores soluciones.</p>
-      </div>
-
-      <!-- Tech interests -->
-      <div class="interests-tech stagger-children">
-        <div class="interest-tech-card featured animate-on-scroll">
-          <div class="interest-tech-icon">🧠</div>
-          <h4>Inteligencia Artificial</h4>
-          <p>Explorando activamente cómo utilizar IA para construir mejores soluciones.</p>
-          <div class="interest-tech-areas">
-            <span>Chatbots</span>
-            <span>Agentes inteligentes</span>
-            <span>Prompt Engineering</span>
-            <span>Automatización</span>
-            <span>Productos con IA</span>
-          </div>
-        </div>
-
-        <div class="interest-tech-card animate-on-scroll">
-          <div class="interest-tech-icon">⚡</div>
-          <h4>Automatización</h4>
-          <p>Me gusta identificar tareas repetitivas y pensar: ¿esto podría hacerse de una manera más inteligente?</p>
-          <div class="interest-tech-areas">
-            <span>Procesos</span>
-            <span>Integración de APIs</span>
-            <span>Procesamiento de info</span>
-          </div>
-        </div>
-
-        <div class="interest-tech-card animate-on-scroll">
-          <div class="interest-tech-icon">🎨</div>
-          <h4>Diseño &amp; UX</h4>
-          <p>Me importa cómo una persona percibe un producto — tanto cómo funciona como cómo se siente utilizarlo.</p>
-          <div class="interest-tech-areas">
-            <span>UX/UI</span>
-            <span>Branding</span>
-            <span>Experiencias digitales</span>
-            <span>Arquitectura de info</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Personal / "Cuando no estoy programando" -->
-      <div class="personal-interests animate-on-scroll">
+      <div class="personal-col">
         <h3>Cuando no estoy programando...</h3>
-        <div class="personal-grid">
-          <div class="personal-item"><span class="icon">🏋️</span> Deportes</div>
-          <div class="personal-item"><span class="icon">🎵</span> Música</div>
-          <div class="personal-item"><span class="icon">🎓</span> Aprender cosas nuevas</div>
-          <div class="personal-item"><span class="icon">👥</span> Conocer personas</div>
-          <div class="personal-item"><span class="icon">🧭</span> Explorar nuevas ideas</div>
-        </div>
-        <div class="music-section">
-          <h4>🎧 Mi música</h4>
-          <div class="music-tags">
-            <span class="music-tag">Rock</span>
-            <span class="music-tag">Reggaetón clásico</span>
-            <span class="music-tag">Hip-hop</span>
-            <span class="music-tag">50 Cent</span>
-            <span class="music-tag">Snoop Dogg</span>
-          </div>
-        </div>
+        <ul class="interests-list">
+          <li>?? <strong>Escucho:</strong> Rock, Hip-Hop y Reggaet�n cl�sico.</li>
+          <li>? <strong>Me gusta:</strong> El deporte y mantener la mente despejada.</li>
+          <li>?? <strong>Siempre aprendo:</strong> Sobre IA, automatizaci�n y arquitectura de software.</li>
+          <li>?? <strong>Me interesa:</strong> Conocer personas, crear proyectos y buscar nuevos problemas para resolver.</li>
+        </ul>
+
+        <h4 class="mt-6">?? Actualmente leyendo</h4>
+        <ul class="interests-list">
+          <li>Clean Architecture</li>
+          <li>Documentaci�n oficial de FastAPI</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VISION FUTURO -->
+  <section class="section future-section">
+    <div class="container text-center">
+      <h2 class="section-title">Lo pr�ximo que quiero construir</h2>
+      <div class="future-tags">
+        <span class="ftag">Plataformas impulsadas por IA</span>
+        <span class="ftag">Automatizaci�n de procesos</span>
+        <span class="ftag">Productos digitales con impacto social</span>
+        <span class="ftag">Arquitecturas backend escalables</span>
+        <span class="ftag">Experiencias web modernas</span>
       </div>
     </div>
   </section>
 
-  <!-- ============================================
-       07 — NEXT CHAPTER
-       ============================================ -->
-  <section class="section" id="next">
+  <!-- FOOTER -->
+  <footer class="footer-memorable" id="contacto">
     <div class="container">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">07</div>
-        <h2 class="section-title">Hacia dónde voy</h2>
-        <p class="section-subtitle">Estoy construyendo mi siguiente etapa.</p>
+      <div class="footer-msg">
+        <h2>Gracias por llegar hasta aqu�.</h2>
+        <p>Si algo de lo que viste conect� contigo, me encantar�a conversar. Ya sea para un proyecto, una oportunidad profesional o simplemente para intercambiar ideas sobre tecnolog�a.</p>
       </div>
-
-      <div class="next-content animate-on-scroll">
-        <p class="next-text">
-          Estoy al comienzo de mi carrera profesional y eso no es algo que quiera ocultar. Es mi mayor oportunidad. Tengo la energía, la curiosidad y las ganas de crecer dentro de un equipo, aprender de personas con más experiencia, y seguir convirtiendo ideas en soluciones reales.
-        </p>
-
-        <div class="next-goals stagger-children">
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Ganar experiencia profesional</div>
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Trabajar en proyectos reales</div>
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Seguir aprendiendo</div>
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Conocer profesionales del sector</div>
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Mejorar mis habilidades técnicas</div>
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Participar en equipos de desarrollo</div>
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Construir productos digitales</div>
-          <div class="next-goal animate-on-scroll"><span class="check">◆</span> Explorar IA y automatización</div>
-        </div>
-
-        <div class="next-areas-label">Áreas de interés profesional</div>
-        <div class="next-areas">
-          <span class="next-area-tag">Desarrollo de software</span>
-          <span class="next-area-tag">Desarrollo web</span>
-          <span class="next-area-tag">Productos digitales</span>
-          <span class="next-area-tag">Automatización</span>
-          <span class="next-area-tag">Inteligencia Artificial</span>
-          <span class="next-area-tag">Tecnología</span>
+      
+      <div class="footer-actions">
+        <a href="mailto:nicolasorti88@gmail.com" class="btn btn-primary">Hablemos por Email</a>
+        <div class="social-links">
+          <a href="https://github.com/NicolasOrtiz88" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       08 — CONTACT
-       ============================================ -->
-  <section class="section" id="contact">
-    <div class="container" style="max-width: 960px;">
-      <div class="section-header animate-on-scroll">
-        <div class="section-number">08</div>
-        <h2 class="section-title">Hablemos</h2>
-        <p class="section-subtitle">¿Tienes una idea, proyecto u oportunidad? Me encantaría escucharte.</p>
-      </div>
-
-      <div class="contact-grid">
-        <!-- Info / Channels -->
-        <div class="contact-info animate-on-scroll">
-          <p>Si quieres conocerme profesionalmente, hablar sobre un proyecto, o simplemente conectar — estoy abierto a conversar. Puedes escribirme por cualquiera de estos canales.</p>
-
-          <div class="contact-channels">
-            <a href="mailto:nicolasorti88@gmail.com" class="contact-channel">
-              <div class="channel-icon">✉️</div>
-              <div>
-                <div class="channel-name">Email</div>
-                <div class="channel-value">nicolasorti88@gmail.com</div>
-              </div>
-            </a>
-            <a href="https://github.com/NicolasOrtiz88" target="_blank" rel="noopener noreferrer" class="contact-channel">
-              <div class="channel-icon">💻</div>
-              <div>
-                <div class="channel-name">GitHub</div>
-                <div class="channel-value">NicolasOrtiz88</div>
-              </div>
-            </a>
-            <a href="#" class="contact-channel">
-              <div class="channel-icon">💼</div>
-              <div>
-                <div class="channel-name">LinkedIn</div>
-                <div class="channel-value">Próximamente</div>
-              </div>
-            </a>
-            <a href="https://wa.me/573113597014" target="_blank" rel="noopener noreferrer" class="contact-channel">
-              <div class="channel-icon">💬</div>
-              <div>
-                <div class="channel-name">WhatsApp</div>
-                <div class="channel-value">Envíame un mensaje</div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Form -->
-        <div class="contact-form animate-on-scroll">
-          <form id="contactForm" action="#" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="name">Nombre</label>
-                <input type="text" id="name" name="name" placeholder="Tu nombre" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="tu@email.com" required />
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="company">Empresa <span style="color:var(--text-muted);font-weight:400;">(opcional)</span></label>
-              <input type="text" id="company" name="company" placeholder="Tu empresa" />
-            </div>
-            <div class="form-group">
-              <label for="message">Mensaje</label>
-              <textarea id="message" name="message" placeholder="Cuéntame sobre tu proyecto o idea..." rows="4" required></textarea>
-            </div>
-            <button type="submit" class="form-submit">
-              💬 Enviar por WhatsApp
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================
-       FOOTER
-       ============================================ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-left">
-        <p>Diseñado y desarrollado por <span class="footer-name">Nicolás Ortiz Nuñez</span></p>
-        <p>&copy; 2025. Construyendo mientras aprendo.</p>
-      </div>
-      <div class="footer-socials">
-        <a href="mailto:nicolasorti88@gmail.com" class="footer-social" aria-label="Email">✉️</a>
-        <a href="https://github.com/NicolasOrtiz88" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub">💻</a>
-        <a href="#" class="footer-social" aria-label="LinkedIn">💼</a>
-        <a href="https://wa.me/573113597014" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="WhatsApp">💬</a>
-      </div>
+      <p class="copyright">Dise�ado y construido por Nicol�s Ortiz Nu�ez.</p>
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
