@@ -156,40 +156,238 @@
     });
   }
 
-  // ─── Smooth scroll for all anchor links ───
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener("click", function (e) {
-      var target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
+  // ─── Smooth Scroll Engine (Suavizado de alta precisión) ───
+  var activeScrollAnimation = null;
 
-  // ─── Active nav link highlight ───
+  // Curva de aceleración y frenado ultra suave (easeInOutQuart)
+  function easeInOutQuart(t) {
+    return t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
+  }
+
+  function smoothScrollTo(targetY, customDuration, onComplete) {
+    // Si ya hay una animación en curso, se cancela para dar paso a la nueva
+    if (activeScrollAnimation) {
+      cancelAnimationFrame(activeScrollAnimation);
+      activeScrollAnimation = null;
+    }
+
+    var startY = window.scrollY || window.pageYOffset;
+    var maxScroll = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    ) - window.innerHeight;
+    
+    var clampedTargetY = Math.max(0, Math.min(Math.round(targetY), maxScroll));
+    var distance = clampedTargetY - startY;
+
+    if (Math.abs(distance) < 2) {
+      window.scrollTo(0, clampedTargetY);
+      if (typeof onComplete === "function") onComplete();
+      return;
+    }
+
+    var absDist = Math.abs(distance);
+    // Duración adaptativa: ni muy rápida en distancias largas ni muy lenta en distancias cortas
+    var duration = customDuration || Math.min(Math.max(650, 520 + Math.sqrt(absDist) * 7.5), 1350);
+
+    var startTime = null;
+    var isCancelled = false;
+
+    function cleanup() {
+      window.removeEventListener("wheel", onUserInterruption);
+      window.removeEventListener("touchstart", onUserInterruption);
+      window.removeEventListener("keydown", onKeyInterruption);
+    }
+
+    function onUserInterruption() {
+      isCancelled = true;
+      if (activeScrollAnimation) {
+        cancelAnimationFrame(activeScrollAnimation);
+        activeScrollAnimation = null;
+      }
+      cleanup();
+      if (typeof onComplete === "function") onComplete();
+    }
+
+    function onKeyInterruption(e) {
+      var scrollKeys = [32, 33, 34, 35, 36, 37, 38, 39, 40];
+      if (scrollKeys.indexOf(e.keyCode) !== -1) {
+        onUserInterruption();
+      }
+    }
+
+    window.addEventListener("wheel", onUserInterruption, { passive: true, once: true });
+    window.addEventListener("touchstart", onUserInterruption, { passive: true, once: true });
+    window.addEventListener("keydown", onKeyInterruption, { passive: true, once: true });
+
+    function step(currentTime) {
+      if (isCancelled) return;
+      if (startTime === null) startTime = currentTime;
+
+      var elapsed = currentTime - startTime;
+      var progress = Math.min(elapsed / duration, 1);
+      var easedProgress = easeInOutQuart(progress);
+
+      var nextY = Math.round(startY + distance * easedProgress);
+      window.scrollTo(0, nextY);
+
+      if (progress < 1) {
+        activeScrollAnimation = requestAnimationFrame(step);
+      } else {
+        window.scrollTo(0, clampedTargetY);
+        activeScrollAnimation = null;
+        cleanup();
+        if (typeof onComplete === "function") onComplete();
+      }
+    }
+
+    activeScrollAnimation = requestAnimationFrame(step);
+  }
+
+  function getSectionScrollPosition(targetElement) {
+    if (!targetElement) return 0;
+    if (targetElement.id === "hero") return 0;
+
+    var navbar = document.getElementById("navbar");
+    var navHeight = navbar ? navbar.offsetHeight : 64;
+    var rect = targetElement.getBoundingClientRect();
+    var currentScroll = window.scrollY || window.pageYOffset;
+    var absoluteTop = rect.top + currentScroll;
+
+    // Margen superior para que el encabezado no quede tapado por la barra
+    return Math.max(0, Math.round(absoluteTop - navHeight - 16));
+  }
+
+  // ─── Active nav link highlight & update ───
   var sections = document.querySelectorAll("section[id]");
   var navLinks = document.querySelectorAll(".nav-links a");
+  var mobileLinks = document.querySelectorAll(".mobile-menu a.mobile-link");
+
+  function updateActiveNav(activeId) {
+    if (!activeId) return;
+
+    navLinks.forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (href === "#" + activeId) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+
+    mobileLinks.forEach(function (link) {
+      var href = link.getAttribute("href");
+      if (href === "#" + activeId) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
 
   function highlightNav() {
-    var scrollPos = window.scrollY + 120;
+    var scrollPos = (window.scrollY || window.pageYOffset) + 140;
 
+    if ((window.scrollY || window.pageYOffset) < 100) {
+      updateActiveNav("hero");
+      return;
+    }
+
+    var currentSectionId = "";
     sections.forEach(function (section) {
       var top = section.offsetTop;
       var height = section.offsetHeight;
       var id = section.getAttribute("id");
 
       if (scrollPos >= top && scrollPos < top + height) {
-        navLinks.forEach(function (link) {
-          link.style.color = "";
-          if (link.getAttribute("href") === "#" + id) {
-            link.style.color = "var(--brand-400)";
-          }
-        });
+        currentSectionId = id;
+      }
+    });
+
+    if (currentSectionId) {
+      updateActiveNav(currentSectionId);
+    }
+  }
+
+  window.addEventListener("scroll", highlightNav, { passive: true });
+  highlightNav();
+
+  // ─── Smooth scroll para todos los enlaces internos (#) ───
+  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+    anchor.addEventListener("click", function (e) {
+      var href = this.getAttribute("href");
+      if (!href || href === "#") return;
+
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        
+        var targetId = href.replace("#", "");
+        updateActiveNav(targetId);
+
+        var targetY = getSectionScrollPosition(target);
+        smoothScrollTo(targetY);
+      }
+    });
+  });
+
+  // Indicador de scroll de la sección Hero
+  var scrollIndicator = document.querySelector(".scroll-indicator");
+  if (scrollIndicator) {
+    scrollIndicator.addEventListener("click", function () {
+      var journeySec = document.getElementById("journey") || document.getElementById("about");
+      if (journeySec) {
+        var targetY = getSectionScrollPosition(journeySec);
+        smoothScrollTo(targetY);
       }
     });
   }
 
-  window.addEventListener("scroll", highlightNav, { passive: true });
+  // ─── Botón Volver Arriba (Back to Top) ───
+  var backToTopBtn = document.getElementById("backToTop");
+  var progressRingFill = document.getElementById("progressRingFill");
+  var circumference = 2 * Math.PI * 20; // r = 20 => ~125.66px
+
+  if (progressRingFill) {
+    progressRingFill.style.strokeDasharray = circumference + " " + circumference;
+    progressRingFill.style.strokeDashoffset = circumference;
+  }
+
+  function handleBackToTopScroll() {
+    if (!backToTopBtn) return;
+    var scrollY = window.scrollY || window.pageYOffset;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    // Aparece suavemente al hacer scroll hacia abajo (> 300px)
+    if (scrollY > 300) {
+      backToTopBtn.classList.add("visible");
+    } else {
+      backToTopBtn.classList.remove("visible");
+    }
+
+    // Progreso circular acorde al scroll de toda la página
+    if (progressRingFill && docHeight > 0) {
+      var scrollPercent = Math.min(Math.max(scrollY / docHeight, 0), 1);
+      var offset = circumference - (scrollPercent * circumference);
+      progressRingFill.style.strokeDashoffset = offset;
+    }
+  }
+
+  if (backToTopBtn) {
+    window.addEventListener("scroll", handleBackToTopScroll, { passive: true });
+    window.addEventListener("resize", handleBackToTopScroll, { passive: true });
+    handleBackToTopScroll();
+
+    backToTopBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      backToTopBtn.classList.add("is-scrolling");
+
+      updateActiveNav("hero");
+
+      smoothScrollTo(0, null, function () {
+        backToTopBtn.classList.remove("is-scrolling");
+      });
+    });
+  }
 
 })();
