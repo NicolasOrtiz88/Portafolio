@@ -6,6 +6,33 @@
 (function () {
   "use strict";
 
+  // ─── Preloader / Pantalla de carga ───
+  var preloader = document.getElementById("preloader");
+  if (preloader) {
+    document.body.classList.add("preloading");
+
+    function dismissPreloader() {
+      if (!preloader.classList.contains("fade-out")) {
+        preloader.classList.add("fade-out");
+        document.body.classList.remove("preloading");
+        setTimeout(function () {
+          preloader.style.display = "none";
+        }, 650);
+      }
+    }
+
+    if (document.readyState === "complete") {
+      setTimeout(dismissPreloader, 350);
+    } else {
+      window.addEventListener("load", function () {
+        setTimeout(dismissPreloader, 450);
+      });
+    }
+
+    // Fallback de seguridad (máximo 1.8 segundos)
+    setTimeout(dismissPreloader, 1800);
+  }
+
   // ─── Navbar scroll effect ───
   const navbar = document.getElementById("navbar");
   let lastScroll = 0;

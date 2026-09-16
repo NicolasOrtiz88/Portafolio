@@ -49,14 +49,31 @@
   }
   </script>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Styles (con versionado para invalidación de caché) -->
+  <link rel="stylesheet" href="css/styles.css?v=1.2" />
 
   <!-- Favicon placeholder -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>N</text></svg>" />
 </head>
 
 <body>
+
+  <!-- ============================================
+       PRELOADER / PANTALLA DE CARGA
+       ============================================ -->
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <div class="preloader-logo-wrap">
+        <div class="preloader-ring"></div>
+        <div class="preloader-ring-pulse"></div>
+        <span class="preloader-logo">N<span>.</span></span>
+      </div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+      <p class="preloader-text">Cargando experiencia digital<span class="preloader-dots">...</span></p>
+    </div>
+  </div>
 
   <!-- ============================================
        NAVBAR
@@ -1175,7 +1192,7 @@
     <span class="back-to-top-tooltip">Volver arriba</span>
   </button>
 
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
+  <!-- JavaScript (con versionado para invalidación de caché) -->
+  <script src="js/main.js?v=1.2"></script>
 </body>
 </html>
